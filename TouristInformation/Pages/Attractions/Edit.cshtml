@@ -1,0 +1,73 @@
+﻿@page
+@model TouristInformation.Pages.Attractions.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Edit Attraction</h1>
+
+<h4>Attraction</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Attraction.Id" />
+            <input type="hidden" asp-for="Attraction.DateCreated" />
+            <input type="hidden" asp-for="Attraction.DateUpdated" />
+            <div class="form-group">
+                <label asp-for="Attraction.AttrName" class="control-label"></label>
+                <input asp-for="Attraction.AttrName" class="form-control" />
+                <span asp-validation-for="Attraction.AttrName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attraction.City" class="control-label"></label>
+                <input asp-for="Attraction.City" class="form-control" />
+                <span asp-validation-for="Attraction.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attraction.Category" class="control-label"></label>
+                <input asp-for="Attraction.Category" class="form-control" />
+                <span asp-validation-for="Attraction.Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attraction.Price" class="control-label"></label>
+                <input asp-for="Attraction.Price" class="form-control" />
+                <span asp-validation-for="Attraction.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attraction.Longitude" class="control-label"></label>
+                <input asp-for="Attraction.Longitude" class="form-control" />
+                <span asp-validation-for="Attraction.Longitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attraction.Latitude" class="control-label"></label>
+                <input asp-for="Attraction.Latitude" class="form-control" />
+                <span asp-validation-for="Attraction.Latitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attraction.RecommendedAge" class="control-label"></label>
+                <input asp-for="Attraction.RecommendedAge" class="form-control" />
+                <span asp-validation-for="Attraction.RecommendedAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attraction.Duration" class="control-label"></label>
+                <input asp-for="Attraction.Duration" class="form-control" />
+                <span asp-validation-for="Attraction.Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary btn-block" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

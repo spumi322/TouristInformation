@@ -1,0 +1,12 @@
+@name="Asd"
+@quantity="2"
+@id="2"
+
+
+GET https://localhost:7125/ReservedTickets
+
+
+###
+
+
+POST https://localhost:7125/ReservedTickets

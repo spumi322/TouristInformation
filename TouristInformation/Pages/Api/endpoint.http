@@ -1,0 +1,4 @@
+﻿
+#GET https://localhost:7125/api/budget
+
+GET https://localhost:7125/api/popular
